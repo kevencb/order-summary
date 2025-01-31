@@ -13,8 +13,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/kevencb/profile-card)
-- Live Site URL: [Development](https://kevencb.github.io/profile-card/)
+- Solution URL: [Github](https://github.com/kevencb/order-summary)
+- Live Site URL: [Development](https://kevencb.github.io/order-summary/)
 
 ## My process
 
