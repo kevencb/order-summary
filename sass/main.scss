@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+  --veryPaleblue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+  --white: #fff;
+  --hover: #766cf1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display";
+  font-weight: 500;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--paleBlue);
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  @media (min-width: 1260px) {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+}
+
+h2,
+h3 {
+  color: var(--darkBlue);
+}
+p {
+  color: var(--desaturatedBlue);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 4.8rem);
+  .card {
+    width: 85%;
+    max-width: 45rem;
+    overflow: hidden;
+    border-radius: 2rem;
+    background-color: var(--white);
+    text-align: center;
+    &__cover {
+      img {
+        width: 100%;
+      }
+    }
+    &__header {
+      padding: 3.2rem 3.2rem 0rem;
+      @media (min-width: 1260px) {
+        padding: 4.5rem 7.2rem 0rem;
+      }
+      h2 {
+        font-size: 2.2rem;
+        font-weight: 900;
+        margin-bottom: 1.6rem;
+        @media (min-width: 1260px) {
+          font-size: 2.8rem;
+        }
+      }
+      p {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        color: var(--desaturatedBlue);
+        @media (min-width: 1260px) {
+          font-size: 1.6rem;
+          line-height: 2.6rem;
+        }
+      }
+    }
+    &__info {
+      width: 85%;
+      height: 8rem;
+      margin: 2.4rem auto;
+      padding: 1.6rem;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--veryPaleblue);
+      &-left {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        img {
+          width: 4.8rem;
+        }
+        h3 {
+          font-size: 1.4rem;
+          font-weight: 900;
+          span {
+            margin-bottom: rem;
+            display: block;
+            font-weight: 500;
+            color: var(--desaturatedBlue);
+          }
+        }
+        @media (min-width: 1260px) {
+          font-size: 1.6rem;
+        }
+      }
+      a {
+        color: var(--brightBlue);
+        font-weight: 700;
+        font-size: 1.3rem;
+        text-underline-offset: 0.4rem;
+        transition: all 300ms ease-in-out;
+        @media (min-width: 1260px) {
+          font-size: 1.4rem;
+        }
+      }
+      :hover {
+        text-decoration: none;
+        color: var(--hover);
+      }
+    }
+    &__actions {
+      width: 85%;
+      margin: 0 auto 3.2rem;
+      &-button {
+        width: 100%;
+        height: 5rem;
+        display: block;
+        padding: 1.5rem auto;
+        margin-bottom: 2.4rem;
+        border-radius: 1rem;
+        border: none;
+        background-color: var(--brightBlue);
+        color: var(--white);
+        font-weight: 900;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: all ease-in-out 300ms;
+        box-shadow: 0 20px 20px rgba($color: #0d30bd, $alpha: 0.19);
+      }
+      &-button:hover {
+        background-color: var(--hover);
+      }
+      &-link {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: var(--desaturatedBlue);
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+      }
+      &-link:hover {
+        color: var(--darkBlue);
+      }
+    }
+  }
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+    font-weight: 700;
+  }
+}
